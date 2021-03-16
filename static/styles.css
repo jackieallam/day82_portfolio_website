@@ -1,0 +1,29 @@
+body {
+    background-color: #fbeeac;
+    color: #28527a;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Truculenta'
+}
+
+section, footer {
+    padding: 3% 15%;
+}
+
+.navbar-custom {
+    background-color: #28527a !important;
+}
+
+.technologies {
+    width:350px;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.card-body {
+    background-color: #8ac4d0;
+    color: #000000;
+}

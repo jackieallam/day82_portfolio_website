@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Jackie Allam">
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Jackie Allam - Portfolio</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Truculenta&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap & Own CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}" type="text/css">
+</head>
+
+<body>
+{% import "bootstrap/wtf.html" as wtf %}
+
+<header>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-custom">
+        <div class="container-fluid">
+            <!-- Nav Bar -->
+            <a class="navbar-brand" href="{{url_for('home')}}">Jackie Allam</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myMenu"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    I'm a Junior Software Developer based in Cape Town. Currently learning Python, and related technologies
+    to make a career change. I enjoy solving problems with code. Here you can see some of the projects I've created.
+</section>
+
+<section id="skills">
+    <h2>Technologies and Tools I'm working with</h2>
+    <ul class="technologies">
+        <li>Python 3</li>
+        <li>HTML 5</li>
+        <li>CSS 3</li>
+        <li>Bootstrap 4/5</li>
+        <li>Flask</li>
+        <li>WTForms</li>
+        <li>Pandas</li>
+        <li>Selenium Web Driver</li>
+        <li>Beautiful Soup</li>
+        <li>Tkinter</li>
+        <li>APIs</li>
+        <li>Github</li>
+        <li>Heroku</li>
+        <li>Javascript ES6</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>React</li>
+        <li>jQuery</li>
+        <li>EJS</li>
+        <li>MongoDB</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <!-- Start of row -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <!--    Card-->
+        <div class="col">
+
+            <div class="card border-dark mb-3 h-100" style="max-width: 18rem;">
+                <a href="https://jaxann-blog.herokuapp.com/" target="_blank">
+                    <img src="{{url_for('static', filename='images/screen-blog.png')}}" class="card-img-top" alt="Blog site">
+                    </a>
+                <div class="card-body text-black">
+                    <h5 class="card-title">Blog</h5>
+                    <p class="card-text">A simple blog that allows registration and commenting. <br><br>
+                        Created with Python and Flask</p>
+                </div>
+            </div>
+        </div>
+
+        <!--    Card-->
+        <div class="col">
+
+            <div class="card border-dark mb-3 h-100" style="max-width: 18rem;">
+                <a href="https://replit.com/@jackieallam/blackjack?embed=1&output=1" target="_blank">
+                    <img src="{{url_for('static', filename='images/screen-blackjack.png')}}" class="card-img-top" alt="Blackjack console">
+                    </a>
+                <div class="card-body text-black">
+                    <h5 class="card-title">Blackjack</h5>
+                    <p class="card-text">The Blackjack card game scripted in Python 3</p>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- End of row -->
+
+
+</section>
+
+<!--<section id="download">-->
+<!--    <h2>My CV</h2>-->
+<!--    Download my CV in PDF format-->
+<!--</section>-->
+
+<section id="certifications">
+    <h2>Certifications</h2>
+    <p>100 Days of Code - The Complete Python Pro Bootcamp for 2021</p>
+    <p>The Complete 2020 Web Development Bootcamp</p>
+    <p>National Diploma: Information Technology</p>
+
+</section>
+
+<section id="contact">
+    <h2>Get in touch</h2>
+    {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "outline-dark"}) }}
+</section>
+
+<footer>
+     <p class="copyright text-muted">&copy; Jackie Allam {{ year }}</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+</html>
