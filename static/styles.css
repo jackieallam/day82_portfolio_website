@@ -24,6 +24,16 @@ section, footer {
 }
 
 .card-body {
-    background-color: #8ac4d0;
-    color: #000000;
+    background-color: #28527a;
+    color: #fbeeac;
 }
+
+a#projects, a#contact, a#home {
+    display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden;
+}
+/*
+    background-color: #8ac4d0;
+*/
