@@ -4,3 +4,5 @@ Flask-Bootstrap==3.3.7.1
 Flask-WTF==0.14.3
 Jinja2==2.11.2
 WTForms==2.3.3
+email-validator==1.1.2
+idna==2.10
